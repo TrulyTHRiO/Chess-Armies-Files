@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="play.css">
+
+  <script src="pieces.js" defer></script>
+  <script src="dot.js" defer></script>
+  <script src="play.js" defer></script>
+  
+  <title>CHESS</title>
+</head>
+
+<body>
+    <div id="codeDisplay"><button id="startGameButton" class="joinTeamButton" style="display: none">START!</button><h1 id="code">NJ14D4KQ</h1></div>
+    <div id="gameContainer">
+        <div id="team1" class="teamBox">
+            <button id="joinTeam1" class="joinTeamButton">JOIN!</button>
+        </div>
+        <div id="boardContainer" style="display:none">
+
+            <div id="board">
+                
+            </div>
+            <div id="promotionSelect">
+            
+            </div>
+        </div>
+        <div id="nicknamePopup">
+            <h1 id="enterNickname">ENTER A NICKNAME</h1>
+            <input id="nicknameField" type="text">
+            <button id="submitNickname" class="joinTeamButton">SUMBIT!</button>
+        </div>
+        <div id="team2" class="teamBox">
+            <button id="joinTeam2" class="joinTeamButton">JOIN!</button>
+        </div>
+    </div>
+</body>

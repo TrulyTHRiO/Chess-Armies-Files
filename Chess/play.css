@@ -1,0 +1,185 @@
+body {
+    background-color: rgb(63, 63, 63);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    overflow-y: hidden;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+#codeDisplay {
+    display: flex;
+    width: 100dvw;
+    height: 10dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+#code {
+    font-weight: 800;
+    font-size: 5dvh;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#boardContainer {
+    top: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 90dvh;
+    width: 60dvw;
+    padding: 0;
+    margin: 0;
+}
+
+#team1 {
+    position: absolute;
+    left: 0;
+}
+
+#team2 {
+    position: absolute;
+    right: 0;
+}
+
+.teamBox {
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    padding: 2em;
+    height: 90dvh;
+    width: 20dvw;
+    background-color: wheat;
+    box-sizing: border-box;
+    z-index: 1
+}
+
+.joinTeamButton {
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+    height: 8dvh;
+    transition: 0.1s;
+}
+
+#joinTeam1 {
+    background-color: cadetblue;
+}
+
+#joinTeam2 {
+    background-color: coral;
+}
+
+#joinTeam1:hover,#joinTeam2:hover,#submitNickname:hover,#startGameButton:hover { /* does not work with .joinTeamButton:hover {} */
+    background-color: blanchedalmond;
+    color: black;
+}
+
+#nicknamePopup {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+#enterNickname {
+    margin: 2dvh 0 0 0;
+}
+
+#nicknameField {
+    width: 100%;
+    height: 8dvh;
+    margin: 0;
+    padding: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    box-sizing: border-box;
+    margin-top: 4dvh;
+    margin-bottom: 4dvh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.5dvh;
+}
+
+#submitNickname {
+    background-color: green;
+}
+
+#startGameButton {
+    width: 18dvw;
+    position: absolute;
+    left: 1dvh;
+    background-color: dimgrey;
+}
+
+.nickname {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.5dvh;
+}
+
+.tile {
+    user-select: none;
+    width: 10dvh;
+    height: 10dvh;
+    padding: 0;
+}
+
+.black {
+    background-color: rgb(165, 112, 42);
+}
+
+.white {
+    background-color: burlywood;
+}
+
+.selected {
+    background-color: red;
+    opacity: 40%;
+}
+
+.owned {
+    background-color: green;
+    opacity: 20%;
+}
+
+.unowned {
+    background-color: red;
+    opacity: 20%;
+}
+
+.rot {
+    transform: rotate(180deg);
+    float: left;
+}
+
+.piece {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#board {
+    display: grid;
+}
+
+#turnChange {
+    visibility: hidden
+}

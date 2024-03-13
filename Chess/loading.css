@@ -1,0 +1,101 @@
+.trapezium {
+    position: absolute;
+    height: 10vw;
+    width: 1vw;
+    border-top: 2.5vw solid #bbb;
+    border-left: .5vw solid transparent;
+    border-right: .5vw solid transparent;
+    margin: 0;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    8.3333% { transform: rotate(30deg); }
+    16.6667% { transform: rotate(60deg); }
+    25% { transform: rotate(90deg); }
+    33.3333% { transform: rotate(120deg); }
+    41.6667% { transform: rotate(150deg); }
+    50% { transform: rotate(180deg); }
+    58.3333% { transform: rotate(210deg); }
+    66.6667% { transform: rotate(240deg); }
+    75% { transform: rotate(270deg); }
+    83.3333% { transform: rotate(300deg); }
+    91.6667% { transform: rotate(330deg); }
+}
+
+#loading {
+    padding: 0;
+    /* margin-left: -1vw; /* 2*border-top + border-left/2 */ /* -(border-left + width/2) + ((height + border-top)/2 OR whatever you want to move the thing into the middle of the box (half the box width for eg.) */
+    margin-top: 3.75vw; /* 10-6.25  because the height of the box is 20vw and half of that is 10, so to get the middle of the circle to the middle of the box we add half of the box height. The -6.25 comes from the circle not having its center positioned on the baseline (top) of the box, rather its top is positioned against the top of the box, so we need to subtract half of the height of the circle ((height + border-top)/2) == 6.25  */
+    height: 100%;
+}
+
+.loadingPad {
+    bottom: -4vw;
+}
+
+.lc {
+    /* no one tell me about how crappy this has become. it's this way because I wanted hovering buttons and I can't be bothered to go back and re do everything now */
+    margin-left: -2vw;
+}
+
+.lr {
+    margin-left: 9vw;
+}
+
+#tr0 {
+    border-top: 3.5vw solid #777;
+    width: 1.4vw;
+    margin-left: -0.2vw;
+    margin-top: -0.5vw;
+    z-index: 1;
+    animation: infinite 2s rotate steps(1, end);
+}
+
+#tr1 {
+    transform: rotate(0deg);
+}
+
+#tr2 {
+    transform: rotate(30deg);
+}
+
+#tr3 {
+    transform: rotate(60deg);
+}
+
+#tr4 {
+    transform: rotate(90deg);
+}
+
+#tr5 {
+    transform: rotate(120deg);
+}
+
+#tr6 {
+    transform: rotate(150deg);
+}
+
+#tr7 {
+    transform: rotate(180deg);
+}
+
+#tr8 {
+    transform: rotate(210deg);
+}
+
+#tr9 {
+    transform: rotate(240deg);
+}
+
+#tr10 {
+    transform: rotate(270deg);
+}
+
+#tr11 {
+    transform: rotate(300deg);
+}
+
+#tr12 {
+    transform: rotate(330deg);
+}
